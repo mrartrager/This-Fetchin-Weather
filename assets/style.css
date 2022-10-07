@@ -1,0 +1,43 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifTahoma, sans-serif;
+}
+
+
+#heading, #momentDate {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#heading {
+   background:linear-gradient(#e66465, #9198e5);
+   padding: 30px;
+   color: #fff;
+   font-size: 50px;
+}
+
+.fiveDayForecast {
+    margin: 30px ;
+    display: flex ;
+    align-items: flex-start ;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#box0{
+    margin-left: 30px;
+}
+
+
+#box0, #box1, #box2, #box3, #box4 {
+    margin-right: 40px;
+    background-color: aquamarine;
+    padding: 40px;
+}
+
+#citySearch {
+
+}
+
+
+

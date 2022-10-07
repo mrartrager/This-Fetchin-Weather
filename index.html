@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <link rel="stylesheet" href="/assets/reset.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="/assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Forecast</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--header with todays date-->
     <header class="" id="">
-        <div class="" id="">
-            <h1>Weather Dashboard</h1>
-            <h3 id="momentDate"></h3>
-        </div>
+      <div class="" id="">
+        <h1 id="heading">Weather Dashboard</h1>
+        <h3 id="momentDate"></h3>
+      </div>
     </header>
 
     <main>
+      <!--search box and button-->
+      <div>
+        <h2>Search for a city</h2>
+        <input
+          type="text"
+          class=""
+          id="citySearch"
+          placeholder="enter a city!"
+        />
+        <div>
+          <button type="button" class="" id="searchBtn">
+            Search
+          </button>
+        </div>
+      </div>
 
- <!--search box and button-->
- <div>
-    <h2>Search for a city</h2>
-    <input type="text" class="" id="citySearch" placeholder="enter a city!">
-    <div>
-    <button type="buttone" class="btn btn-info" id="searchBtn">Search</button>
-    </div>
- </div>
+      <!--This is be current weather box-->
+      <section id="WeatherData">
+        <div id="currentForecast">
+          <div id="currentData">
+            <h3 class="" id="current-city"></h3>
+            <p>Temperature:<span id="temperature"></span>*F</p>
+            <p>Wind Speed:<span id="windSpeed"></span>MPH</p>
+            <p>Humidity:<span id="humidity"></span>%</p>
+          </div>
+        </div>
 
- <!--This is be current weather box-->
-<section id="WeatherData">
-<div id="currentForecast">
-    <div id="currentData">
-    <h3 class="" id="current-city"></h3>
-    <p>Temperature:<span id="temperature"></span>*F</p>
-    <p>Wind Speed:<span id="windSpeed"></span>MPH</p>
-    <p>Humidity:<span id="humidity"></span>%</p> 
-</div>
-</div>
+        <!--Weather boxs/cards that will show the 5 day forecast-->
+        <div class="fiveDayForecast">
+          <h2>5-Day Forecast:</h2>
 
+          <div class="weatherBox" id="box0">
+            <h3>Temp:</h3>
+            <h3>Wind:</h3>
+            <h3>Humidity:</h3>
+          </div>
 
-<!--Weather boxs/cards that will show the 5 day forecast-->
-<div class="5dayForecast">
-    <h2>5-Day Forecast:</h2>
-    
-    <div class="weatherBox" id="box0">
-        <h3>Temp:</h3>
-        <h3>Wind:</h3>
-        <h3>Humidity:</h3>
-    </div>
+          <div class="weatherBox" id="box1">
+            <h3>Temp:</h3>
+            <h3>Wind:</h3>
+            <h3>Humidity:</h3>
+          </div>
 
-    <div class="weatherBox" id="box1">
-        <h3>Temp:</h3>
-        <h3>Wind:</h3>
-        <h3>Humidity:</h3>
-    </div>
+          <div class="weatherBox" id="box2">
+            <h3>Temp:</h3>
+            <h3>Wind:</h3>
+            <h3>Humidity:</h3>
+          </div>
 
-    <div class="weatherBox" id="box2">
-        <h3>Temp:</h3>
-        <h3>Wind:</h3>
-        <h3>Humidity:</h3>
-    </div>
+          <div class="weatherBox" id="box3">
+            <h3>Temp:</h3>
+            <h3>Wind:</h3>
+            <h3>Humidity:</h3>
+          </div>
 
+          <div class="weatherBox" id="box4">
+            <h3>Temp:</h3>
+            <h3>Wind:</h3>
+            <h3>Humidity:</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
 
-    <div class="weatherBox" id="box3">
-        <h3>Temp:</h3>
-        <h3>Wind:</h3>
-        <h3>Humidity:</h3>
-    </div>
-    
-    <div class="weatherBox" id="box4">
-        <h3>Temp:</h3>
-        <h3>Wind:</h3>
-        <h3>Humidity:</h3>
-    </div>
-</div>
-</section>
-</main>
-<footer>
-
-</footer>
-
-<script src="./assets/script.js"></script>
-
-</body>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
