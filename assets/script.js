@@ -1,3 +1,4 @@
+//displaying current date using momentJS
 let theDate = moment().format('LL');
 document.getElementById("momentDate").innerHTML = theDate;
 
@@ -56,10 +57,15 @@ fetch(getLatLon)
         .then(function(fiveDay) {
             console.log(fiveDay)
 
+            // first card
         let forecastOneDate= moment().add(1,"d").format("M/D/YYYY");
         let oneTemp= fiveDay.list[5].main.temp
         let oneWind= fiveDay.list[5].main.temp
         let oneHumidity= fiveDay.list[5].main.temp
+
+        let dayOneCard= document.getElementById("box0")
+
+         
         
         })
     })
