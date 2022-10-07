@@ -29,7 +29,7 @@ fetch(weatherData)
         let currentWind= document.getElementById('currentWindSpeed');
         let currentHumidity= document.getElementById('currentHumidity');
 
-        currentCity.textContent= citySearched+""+theDate
+        currentCity.textContent= citySearched+" "+theDate
         currentTemp.textContent=  presentTemp
         currentWind.textContent= presentWindSpeed
         currentHumidity.textContent= presenthumidity
@@ -41,32 +41,38 @@ let getLatLon= "http://api.openweathermap.org/geo/1.0/direct?q=" + citySearched 
 
 
 fetch(getLatLon)
-    .then(function(response){
-        return response.json()
+    .then(function(response2){
+        return response2.json()
     })
-    .then(function (latLon){
+    .then(function (latLong){
         let locationLat= latLong[0].lat    
         let locationLong= latLong[0].lon
-        let fiveDayForecast= "http://api.openweathermap.org/data/2.5/forecast?lat="+cityLat+"&lon="+cityLong+"&appid="+apiKey+"&units=imperial" 
+        let fiveDayForecast= "http://api.openweathermap.org/data/2.5/forecast?lat="+locationLat+"&lon="+locationLong+"&appid="+apiKey+"&units=imperial" 
 
         
         fetch(fiveDayForecast)
-        .then(function(response){
-            return response.json()
+        .then(function(response3){
+            return response3.json()
         })  
         .then(function(fiveDay) {
             console.log(fiveDay)
 
-            // first card
+            // first card data
         let forecastOneDate= moment().add(1,"d").format("M/D/YYYY");
         let oneTemp= fiveDay.list[5].main.temp
         let oneWind= fiveDay.list[5].main.temp
         let oneHumidity= fiveDay.list[5].main.temp
 
-        let dayOneCard= document.getElementById("box0")
+        let dayOneCard= document.getElementById("boxDate0");
+        let dayOneTemp= document.getElementById("temp0");
+        let dayOneWind= document.getElementById("wind0");
+        let dayOneHumidity= document.getElementById("hum0");
 
-         
-        
+        dayOneCard.textContent= forecastOneDate;
+        dayOneTemp.textContent= oneTemp;
+        dayOneWind.textContent= oneWind;
+        dayOneHumidity.textContent= oneHumidity;
+
         })
     })
 
