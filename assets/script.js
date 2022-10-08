@@ -4,11 +4,11 @@ document.getElementById("momentDate").innerHTML = theDate;
 
 let searchBtn=document.getElementById('search-btn');
 
-let citySearched= "Minneapolis"; // ${userSearchInput} Possibly use this for search input
+let citySearched= "Minneapolis"; // ${userSearchInput}  use this for search input? or searchbutton.addeventlistner function
 
 
 // api key and "custom" URL 
-let apiKey ="ec494eef8fd8461dc250656042aa352f";
+const apiKey ="ec494eef8fd8461dc250656042aa352f";
 let weatherData = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearched + "&appid=" + apiKey+ "&units=imperial";
 
 // this is for the current weather of the searched city 
