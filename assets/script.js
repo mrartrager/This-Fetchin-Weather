@@ -4,7 +4,7 @@ document.getElementById("momentDate").innerHTML = theDate;
 
 let searchBtn=document.getElementById('search-btn');
 
-let citySearched= "milwaukee"; // ${userSearchInput} Possibly use this for search input
+let citySearched= "Minneapolis"; // ${userSearchInput} Possibly use this for search input
 
 
 // api key and "custom" URL 
@@ -25,7 +25,7 @@ fetch(weatherData)
 
 
         let currentCity= document.getElementById('currentCity');
-        let currentTemp= document.getElementById('currentTemperature');
+        let currentTemp= document.getElementById('currentTemperature'); 
         let currentWind= document.getElementById('currentWindSpeed');
         let currentHumidity= document.getElementById('currentHumidity');
 
@@ -57,11 +57,11 @@ fetch(getLatLon)
         .then(function(fiveDay) {
             console.log(fiveDay)
 
-            // first card data
+            // first card data 
         let forecastOneDate= moment().add(1,"d").format("M/D/YYYY");
-        let oneTemp= fiveDay.list[5].main.temp
-        let oneWind= fiveDay.list[5].main.temp
-        let oneHumidity= fiveDay.list[5].main.temp
+        let oneTemp= fiveDay.list[0].main.temp
+        let oneWind= fiveDay.list[0].wind.speed
+        let oneHumidity= fiveDay.list[0].main.humidity
 
         let dayOneCard= document.getElementById("boxDate0");
         let dayOneTemp= document.getElementById("temp0");
@@ -75,15 +75,72 @@ fetch(getLatLon)
 
 
         // second card data
+        let forecastTwoDate= moment().add(2,"d").format("M/D/YYYY");
+        let twoTemp= fiveDay.list[1].main.temp
+        let twoWind= fiveDay.list[1].wind.speed
+        let twoHumidity= fiveDay.list[1].main.humidity
+
+        let dayTwoCard= document.getElementById("boxDate1");
+        let dayTwoTemp= document.getElementById("temp1");
+        let dayTwoWind= document.getElementById("wind1");
+        let dayTwoHumidity= document.getElementById("hum1");
+
+        dayTwoCard.textContent= forecastTwoDate;
+        dayTwoTemp.textContent= twoTemp;
+        dayTwoWind.textContent= twoWind;
+        dayTwoHumidity.textContent= twoHumidity;
 
 
         // third card data
+        let forecastThreeDate= moment().add(3,"d").format("M/D/YYYY");
+        let threeTemp= fiveDay.list[2].main.temp
+        let threeWind= fiveDay.list[2].wind.speed
+        let threeHumidity= fiveDay.list[2].main.humidity
+
+        let dayThreeCard= document.getElementById("boxDate2");
+        let dayThreeTemp= document.getElementById("temp2");
+        let dayThreeWind= document.getElementById("wind2");
+        let dayThreeHumidity= document.getElementById("hum2");
+
+        dayThreeCard.textContent= forecastThreeDate;
+        dayThreeTemp.textContent= threeTemp;
+        dayThreeWind.textContent= threeWind;
+        dayThreeHumidity.textContent= threeHumidity;
 
 
         // fourth card data
+        let forecastFourDate= moment().add(4,"d").format("M/D/YYYY");
+        let fourTemp= fiveDay.list[3].main.temp
+        let fourWind= fiveDay.list[3].wind.speed
+        let fourHumidity= fiveDay.list[3].main.humidity
+
+        let dayFourCard= document.getElementById("boxDate3");
+        let dayFourTemp= document.getElementById("temp3");
+        let dayFourWind= document.getElementById("wind3");
+        let dayFourHumidity= document.getElementById("hum3");
+
+        dayFourCard.textContent= forecastFourDate;
+        dayFourTemp.textContent= fourTemp;
+        dayFourWind.textContent= fourWind;
+        dayFourHumidity.textContent= fourHumidity;
+
 
 
         // fifth card data
+        let forecastFiveDate= moment().add(5,"d").format("M/D/YYYY");
+        let fiveTemp= fiveDay.list[4].main.temp
+        let fiveWind= fiveDay.list[4].wind.speed
+        let fiveHumidity= fiveDay.list[4].main.humidity
+
+        let dayFiveCard= document.getElementById("boxDate4");
+        let dayFiveTemp= document.getElementById("temp4");
+        let dayFiveWind= document.getElementById("wind4");
+        let dayFiveHumidity= document.getElementById("hum4");
+
+        dayFiveCard.textContent= forecastFiveDate;
+        dayFiveTemp.textContent= fiveTemp;
+        dayFiveWind.textContent= fiveWind;
+        dayFiveHumidity.textContent= fiveHumidity;
 
         })
     })
