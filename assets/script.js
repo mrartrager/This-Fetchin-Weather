@@ -2,13 +2,46 @@
 let theDate = moment().format('LL');
 document.getElementById("momentDate").innerHTML = theDate;
 
-let searchBtn=document.getElementById('search-btn');
+let searchBtn=document.getElementById("searchBtn");
 
-let citySearched= "Minneapolis"; // ${userSearchInput}  use this for search input? or searchbutton.addeventlistner function
+// let citySearched= "Milwaukee";  ${userSearchInput}  use this for search input? or searchbutton.addeventlistner function
+
 
 
 // api key and "custom" URL 
 const apiKey ="ec494eef8fd8461dc250656042aa352f";
+
+let searchHistory= [];
+
+function storeCityName (city){
+    searchHistory.push(city)
+    console.log(searchHistory)
+localStorage.setItem("cityName", searchHistory)
+}
+
+function getSearchHistory(){
+
+    let history= [localStorage.getItem("cityName")]
+    
+    let searchHistorydiv=document.getElementById("searchHistory")
+    searchHistorydiv.innerHTML=""
+    for (let i=0; i<history.length; i++){
+        let paragraph= document.createElement("p")
+        paragraph.innerHTML=history[i];
+        searchHistorydiv.append(paragraph)
+    }
+}
+
+
+getSearchHistory()
+
+function getWeatherData(citySearched){
+
+    storeCityName(citySearched)
+
+    getSearchHistory()
+
+
 let weatherData = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearched + "&appid=" + apiKey+ "&units=imperial";
 
 // this is for the current weather of the searched city 
@@ -69,7 +102,7 @@ fetch(getLatLon)
         let dayOneHumidity= document.getElementById("hum0");
 
         dayOneCard.textContent= forecastOneDate;
-        dayOneTemp.textContent= oneTemp;
+        dayOneTemp.textContent= "Temp: "+oneTemp;
         dayOneWind.textContent= oneWind;
         dayOneHumidity.textContent= oneHumidity;
 
@@ -144,8 +177,19 @@ fetch(getLatLon)
 
         })
     })
+}
+
+    
 
 
+searchBtn.addEventListener('click', function(){
+    let cityName = document.getElementById("citySearch").value
+    console.log(cityName);
+    getWeatherData(cityName)
+    })
 
+    // searchBtn.addEventListener('click', outterFunction)
 
+    // function outterFunction(){
 
+    // }
