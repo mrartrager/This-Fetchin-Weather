@@ -1,13 +1,12 @@
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifTahoma, sans-serif;
-    background-image: url(https://i.pinimg.com/originals/31/c3/3c/31c33c2a5209e8301532bd87ef9ad8df.jpg);
+    background-image: url(https://static.photocdn.pt/images/articles/2019/05/22/How_to_Photograph_Sunsets_the_Easy_Way.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     /* background-color: #cccccc; */
 }
-
 
 
 #heading, #momentDate {
@@ -54,20 +53,23 @@ body {
     text-align: center;
 }
 
+
 #searchBtn {
   height: 36px;
   width: 150px;
   border: 1px solid #00B4CC;
   margin-left:45px;
   margin-top: 10px;
-  background: #ffffff29;
+  background: #ffffff47;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   border-radius:15px;
   cursor: pointer;
   font-size: 20px;
-  box-shadow: -3px 2px 20px 3px rgba(255, 255, 255, 0.49);
+  box-shadow: -3px 2px 20px 3px rgba(255, 255, 255, 0.49) inset;
+  box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.49);
 }
+
 
 .searchBar{
     border: 5px solid #030303;
@@ -102,12 +104,16 @@ body {
     0px 18px 23px rgba(0,0,0,0.4);
 }
 
+#searchHistory {
+    font-size: 50px; 
+}
+
 #box0{
     margin-left: 30px;
 }
 
 #currentForecast{
-    background: rgba(24, 24, 27, 0.349);
+    background: rgba(24, 24, 27, 0.437);
     margin-left: 635px;
     margin-top: 30px;
     width: 1150px;
@@ -121,6 +127,7 @@ body {
     flex-direction: column;
     padding: 25px;
     color:#fff;
+    box-shadow: 3px 2px 10px 3px rgba(255, 255, 255, 0.518) inset;
 }
 
 #currentData {
@@ -132,3 +139,8 @@ body {
     color:#fff;
 }
 
+#searchBtn:hover {
+    background: #03030355;
+    color: #fff;
+    box-shadow: 3px 2px 10px 3px rgba(0, 0, 0, 0.521) inset;
+}

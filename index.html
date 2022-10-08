@@ -29,8 +29,9 @@
           id="citySearch"
           placeholder="Enter a city!"
         />
+
         <div>
-          <button type="button" class="" id="searchBtn">
+          <button type="button" class="searchy" id="searchBtn">
             Search
           </button>
         </div>
@@ -39,21 +40,18 @@
       <!--This is be current weather box-->
       <section id="WeatherData">
 
+        
         <div id="currentForecast">
           <div id="currentData">
             <h3 class="" id="currentCity"></h3>
-            <p>Temperature:<span id="currentTemperature"></span>*F</p>
-            <p>Wind Speed:<span id="currentWindSpeed"></span>MPH</p>
-            <p>Humidity:<span id="currentHumidity"></span>%</p>
+            <p>Temperature: <span id="currentTemperature"></span>&#176;F</p>
+            <p>Wind Speed: <span id="currentWindSpeed"></span>MPH</p>
+            <p>Humidity: <span id="currentHumidity"></span>%</p>
           </div>
         </div>
 
-
-        <div id="searchHistory">
-          
-
-
-        </div>
+        <!--used to display cities searched-->
+        <span><div id="searchHistory"> </div></span>
 
         <!--Weather boxs/cards that will show the 5 day forecast-->
         <div class="fiveDayForecast">

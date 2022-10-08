@@ -11,6 +11,7 @@ let searchBtn=document.getElementById("searchBtn");
 // api key and "custom" URL 
 const apiKey ="ec494eef8fd8461dc250656042aa352f";
 
+
 let searchHistory= [];
 
 function storeCityName (city){
@@ -187,6 +188,7 @@ searchBtn.addEventListener('click', function(){
     console.log(cityName);
     getWeatherData(cityName)
     })
+
 
     // searchBtn.addEventListener('click', outterFunction)
 
