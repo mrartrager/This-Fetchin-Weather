@@ -103,8 +103,8 @@ fetch(getLatLon)
 
         dayOneCard.textContent= forecastOneDate;
         dayOneTemp.textContent= "Temp: "+oneTemp;
-        dayOneWind.textContent= oneWind;
-        dayOneHumidity.textContent= oneHumidity;
+        dayOneWind.textContent= "Wind: "+oneWind;
+        dayOneHumidity.textContent= "Humidity: "+oneHumidity;
 
 
         // second card data
@@ -119,9 +119,9 @@ fetch(getLatLon)
         let dayTwoHumidity= document.getElementById("hum1");
 
         dayTwoCard.textContent= forecastTwoDate;
-        dayTwoTemp.textContent= twoTemp;
-        dayTwoWind.textContent= twoWind;
-        dayTwoHumidity.textContent= twoHumidity;
+        dayTwoTemp.textContent= "Temp: "+twoTemp;
+        dayTwoWind.textContent= "Wind: "+twoWind;
+        dayTwoHumidity.textContent= "Humidity: "+twoHumidity;
 
 
         // third card data
@@ -136,9 +136,9 @@ fetch(getLatLon)
         let dayThreeHumidity= document.getElementById("hum2");
 
         dayThreeCard.textContent= forecastThreeDate;
-        dayThreeTemp.textContent= threeTemp;
-        dayThreeWind.textContent= threeWind;
-        dayThreeHumidity.textContent= threeHumidity;
+        dayThreeTemp.textContent="Temp: "+ threeTemp;
+        dayThreeWind.textContent="Wind: "+ threeWind;
+        dayThreeHumidity.textContent= "Humidity: "+threeHumidity;
 
 
         // fourth card data
@@ -153,9 +153,9 @@ fetch(getLatLon)
         let dayFourHumidity= document.getElementById("hum3");
 
         dayFourCard.textContent= forecastFourDate;
-        dayFourTemp.textContent= fourTemp;
-        dayFourWind.textContent= fourWind;
-        dayFourHumidity.textContent= fourHumidity;
+        dayFourTemp.textContent="Temp: "+fourTemp;
+        dayFourWind.textContent="Wind: "+fourWind;
+        dayFourHumidity.textContent="Humidity: "+fourHumidity;
 
 
 
@@ -171,9 +171,9 @@ fetch(getLatLon)
         let dayFiveHumidity= document.getElementById("hum4");
 
         dayFiveCard.textContent= forecastFiveDate;
-        dayFiveTemp.textContent= fiveTemp;
-        dayFiveWind.textContent= fiveWind;
-        dayFiveHumidity.textContent= fiveHumidity;
+        dayFiveTemp.textContent= "Temp: "+fiveTemp;
+        dayFiveWind.textContent= "Wind: "+fiveWind;
+        dayFiveHumidity.textContent= "Humidity: "+fiveHumidity;
 
         })
     })
