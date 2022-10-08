@@ -11,7 +11,7 @@
   </head>
   <body>
     <!--header with todays date-->
-    <header class="" id="">
+    <header class="top" id="">
       <div class="" id="">
         <h1 id="heading">Weather Dashboard</h1>
         <h3 id="momentDate"></h3>
@@ -19,12 +19,13 @@
     </header>
 
     <main>
+
       <!--search box and button-->
-      <div>
-        <h2>Search for a city</h2>
+      <div class="searchBtn">
+        <h2 class="searchHeader">Search for a city</h2>
         <input
           type="text"
-          class=""
+          class="searchBar"
           id="citySearch"
           placeholder="Enter a city!"
         />
@@ -48,7 +49,7 @@
 
         <!--Weather boxs/cards that will show the 5 day forecast-->
         <div class="fiveDayForecast">
-          <h2>5-Day Forecast:</h2>
+          <h2 class="fiveDay">5-Day Forecast:</h2>
 
           <div class="weatherBox" id="box0">
             <h2><span id="boxDate0"></span></h2>
@@ -87,7 +88,9 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+
+    </footer>
 
     <script src="./assets/script.js"></script>
   </body>
