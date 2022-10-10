@@ -71,7 +71,7 @@ fetch(weatherData)
 
     //items for 5 day forecast will go down here
 
-let getLatLon= "http://api.openweathermap.org/geo/1.0/direct?q=" + citySearched + "&limit=1&appid=" + apiKey
+let getLatLon= "https://api.openweathermap.org/geo/1.0/direct?q=" + citySearched + "&limit=1&appid=" + apiKey
 
 
 fetch(getLatLon)
@@ -81,7 +81,7 @@ fetch(getLatLon)
     .then(function (latLong){
         let locationLat= latLong[0].lat    
         let locationLong= latLong[0].lon
-        let fiveDayForecast= "http://api.openweathermap.org/data/2.5/forecast?lat="+locationLat+"&lon="+locationLong+"&appid="+apiKey+"&units=imperial" 
+        let fiveDayForecast= "https://api.openweathermap.org/data/2.5/forecast?lat="+locationLat+"&lon="+locationLong+"&appid="+apiKey+"&units=imperial" 
 
         
         fetch(fiveDayForecast)
